@@ -1,24 +1,25 @@
 #include <stdio.h>
-int main()
+ 
+void big()
 {
-    int n, i;
-    unsigned long long factorial = 1;
-
-    printf("Enter an integer: ");
-    scanf("%d",&n);
-
-    // show error if the user enters a negative integer
-    if (n < 0)
-        printf("Error! Factorial of a negative number doesn't exist.");
-
-    else
+    int num1, num2, num3;
+ 
+    printf("Enter the values of num1, num2 and num3\n");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("num1 = %d\tnum2 = %d\tnum3 = %d\n", num1, num2, num3);
+    if (num1 > num2)
     {
-        for(i=1; i<=n; ++i)
+        if (num1 > num3)
         {
-            factorial *= i;              // factorial = factorial*i;
+            printf("num1 is the greatest among three \n");
         }
-        printf("Factorial of %d = %llu", n, factorial);
+        else
+        {
+            printf("num3 is the greatest among three \n");
+        }
     }
-
-    return 0;
+    else if (num2 > num3)
+        printf("num2 is the greatest among three \n");
+    else
+        printf("num3 is the greatest among three \n");
 }
